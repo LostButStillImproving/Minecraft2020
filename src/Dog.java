@@ -26,6 +26,10 @@ public class Dog implements Animal {
 
     }
 
+    public void sound() {
+        System.out.println("WOOF");
+    }
+
     public String getGender() {
         return stats.gender;
     }

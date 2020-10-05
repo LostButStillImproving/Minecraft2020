@@ -59,6 +59,10 @@ public class Sheep implements Animal {
 
     }
 
+    public void sound(){
+        System.out.println("Meeeeh");
+    }
+
 
 
 }

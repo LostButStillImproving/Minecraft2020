@@ -23,7 +23,7 @@ public class WorldGrid {
 
         for (int i = 0; i < world.animals.size(); i++) {
             animal = world.animals.get(i);
-            System.out.println(animal.getGender());
+            animal.sound();
         }
     }
 }
