@@ -5,11 +5,13 @@
  * 02/10/2020
  */
 
+
 public class Sheep {
 
     Stats stats = new Stats();
     Head head;
     Body body;
+    String gender;
     Feet foot1, foot2, foot3, foot4;
 
     Sheep() {
@@ -24,7 +26,9 @@ public class Sheep {
         System.out.println("Fåret er på Z: " + this.stats.z);
 
     }
-
+    String getGender() {
+        return stats.gender;
+    }
     void show() {
         System.out.println();
         System.out.println("            _.%%%%%%%%%%%%%\n" +

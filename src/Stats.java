@@ -10,7 +10,7 @@ public class Stats {
     int level;
     int hp;
     int mana;
-    String gender;
+    String gender =(Math.random() < 0.5) ? "male":"Female";
     String location;
     int creaturesKilled;
     int x;
