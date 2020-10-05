@@ -1,31 +1,29 @@
 import java.util.ArrayList;
 
 public class WorldGrid {
-
-    ArrayList<Object> sheeps;
+    ArrayList<Animal> animals;
     WorldGrid(){
         //Instansiering af 4D array 10x10x10x1
         Object[][][][] world = new Object[10][10][10][1];
 
         //instansicering af ArrayList af objekter
-        ArrayList<Object> sheeps = new ArrayList<Object>();
-        world[0][0][0][0] = sheeps;
-        //heep objekt instansieres i objektarrayet
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+        world[0][0][0][0] = animals;
+        //sheep objekt instansieres i objektarraylist
         for (int i = 0; i < 10; i++) {
-            sheeps.add(new Sheep());
+            animals.add(new Sheep());
+            animals.add(new Dog());
         }
-        this.sheeps = sheeps;
+        this.animals = animals;
     }
 
     public static void main(String[] args) {
-        ArrayList<Sheep> sheeps;
-        Object sheep;
-        Sheep sheepyfied;
+        Animal animal;
         WorldGrid world = new WorldGrid();
-        for (int i = 0; i < world.sheeps.size(); i++) {
-            sheep = world.sheeps.get(i);
-            sheepyfied = (Sheep) sheep;
-            System.out.println(sheepyfied.getGender());
+
+        for (int i = 0; i < world.animals.size(); i++) {
+            animal = world.animals.get(i);
+            System.out.println(animal.getGender());
         }
     }
 }

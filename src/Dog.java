@@ -1,13 +1,11 @@
+public class Dog implements Animal {
 
-/**
- * Developed by András Ács (acsandras@gmail.com)
- * Zealand / www.zealand.dk
- * Licensed under the MIT License
- * 02/10/2020
- */
-
-
-public class Sheep implements Animal {
+    /**
+     * Developed by András Ács (acsandras@gmail.com)
+     * Zealand / www.zealand.dk
+     * Licensed under the MIT License
+     * 02/10/2020
+     */
 
     Stats stats = new Stats();
     Head head;
@@ -15,21 +13,23 @@ public class Sheep implements Animal {
     String gender;
     Feet foot1, foot2, foot3, foot4;
 
-    Sheep() {
+    Dog() {
         System.out.println(Game.visNytObjekt("sheep"));
         show();
 
-        this.stats.x=(int)(Math.random()*200-100);
+        this.stats.x = (int) (Math.random() * 200 - 100);
         System.out.println("Fåret er på X: " + this.stats.x);
-        this.stats.y=(int)(Math.random()*200-100);
+        this.stats.y = (int) (Math.random() * 200 - 100);
         System.out.println("Fåret er på Y: " + this.stats.y);
-        this.stats.z=(int)(Math.random()*3+1);
+        this.stats.z = (int) (Math.random() * 3 + 1);
         System.out.println("Fåret er på Z: " + this.stats.z);
 
     }
+
     public String getGender() {
         return stats.gender;
     }
+
     void show() {
         System.out.println();
         System.out.println("            _.%%%%%%%%%%%%%\n" +
@@ -44,8 +44,8 @@ public class Sheep implements Animal {
     /* depracated */
     void gåVinkel() {
         // Får gå random antal skridt i en retning
-        int retning = (int)(Math.random()*360);
-        int antalSkridt = (int)(Math.random()*5);
+        int retning = (int) (Math.random() * 360);
+        int antalSkridt = (int) (Math.random() * 5);
         System.out.printf(
                 "Fåret går %d skridt i retning %d", antalSkridt, retning);
 
@@ -53,12 +53,12 @@ public class Sheep implements Animal {
 
     void gåXY() {
         // Får gå random (0..2) antal skridt i en retning x eller y
-        if (Math.random()>0.5) { this.stats.x += (int)(Math.random()*7)-3;}
-        else {this.stats.y += (int)(Math.random()*7)-3;}
+        if (Math.random() > 0.5) {
+            this.stats.x += (int) (Math.random() * 7) - 3;
+        } else {
+            this.stats.y += (int) (Math.random() * 7) - 3;
+        }
         System.out.println("Fåret er nu på " + stats.x + " -  " + stats.y);
 
     }
-
-
-
 }
